@@ -1,0 +1,2 @@
+module HookupsHelper
+end

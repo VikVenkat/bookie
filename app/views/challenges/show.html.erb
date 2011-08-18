@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+Users in Challenge:
+That you can't <b><%= @challenge.challenge_name%></b> for <b><%= @challenge.wager %></b>
+<br/>
+
+<h3>People signed up: </h3>
+	<ul>
+	  <%= for user in @challenge.users do %>
+		  <li>
+			<%= user.email %>
+		  </li>
+	  <% end %>  
+	</ul>
+</p>
+
+
+<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
+<%= link_to 'Back', challenges_path %>

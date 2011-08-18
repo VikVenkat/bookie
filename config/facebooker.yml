@@ -1,0 +1,24 @@
+development:
+  api_key: 142270179193416
+  secret_key: f6beeedb769017dd7c6c45dd50706c1d
+  callback_url: http://192.168.0.7:3000/
+  pretty_errors: true
+  set_asset_host_to_callback_url: false
+  tunnel:
+    public_host_username:
+    public_host:
+    public_port: 4007
+    local_port: 3000
+    server_alive_interval: 0
+
+production:
+  api_key: 142270179193416
+  secret_key: f6beeedb769017dd7c6c45dd50706c1d
+  callback_url: http://www.facebook-connect-demo.com
+  set_asset_host_to_callback_url: false
+  tunnel:
+    public_host_username:
+    public_host:
+    public_port: 4007
+    local_port: 3000
+    server_alive_interval: 0

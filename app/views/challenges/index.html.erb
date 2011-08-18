@@ -1,0 +1,40 @@
+<h1>Listing Challenges</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Wager</th>
+	<th>Created by</th>	
+    <th>Date</th>
+    <th>Due Date</th>
+	<th>Accept this</th>
+	<th># Challengers</th>
+    <th>Complete?</th>
+	
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @challenges.each do |c| %>
+  <tr>
+    <td><%= c.challenge_name %></td>
+    <td><%= c.wager %></td>	
+	<td><%= c.started_by %></td>	
+    <td><%= c.challenge_date %></td>
+    <td><%= c.due_date %></td>
+	<td><%= link_to 'Accept Challenge', hookups_path(:challenge_id => c), :method => :post %></td>
+	<td><%#= c.find.all.count %></td>
+    <td><%= c.complete %></td>
+
+    <td><%= link_to 'Show', c %></td>
+    <td><%= link_to 'Edit', edit_challenge_path(c) %></td>
+    <td><%= link_to 'Kill', c, :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Challenge', new_challenge_path %>
+<%= link_to 'Home', root_path %>
