@@ -8,7 +8,7 @@ gem 'rails', '3.0.7'
 #gem 'facebooker'
 
 #this still seems to be breaking
-#gem 'fbgraph'
+# gem 'fbgraph'
 
 gem 'sqlite3'
 
