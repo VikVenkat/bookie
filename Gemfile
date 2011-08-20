@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
 # Earlier version of rake needed for Heroku
-# gem "rake", "0.8.7"
+gem "rake", "0.8.7"
 #gem 'rake', '0.9.3'
 
 #gem 'facebooker'
