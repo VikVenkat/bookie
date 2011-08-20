@@ -14,10 +14,11 @@ class Challenge < ActiveRecord::Base
 	
 
   def self.complete?
-	if self.complete = true
+	if self.complete == true
 	  return true
 	else 
 	  return false
+	end
   end
 	
 

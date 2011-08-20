@@ -6,7 +6,8 @@ Bookie::Application.routes.draw do
   resources :challenges
   resources :hookups
   
-  match '/challenges?:complete' => 'challenges#complete'
+   put 'challenges/:id/complete' => 'challenges#complete', :as => 'complete_challenge'
+  #match '/challenges?:complete' => 'challenges#complete'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

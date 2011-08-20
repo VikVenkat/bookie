@@ -70,14 +70,13 @@ class ChallengesController < ApplicationController
   def complete
     @challenge = Challenge.find(params[:id])
 	
-	if params[:complete] => true
-	  @challenge.complete = true
-	else if params[:complete] => false
-	  @challenge.complete = false
-	else   
-	
-	end
-	
+	@challenge.complete = true
+	@challenge.completed_by = current_user.id
+	@challenge.save
+	flash[:notice] = "Completed Challenge."
+	redirect_to root_path
+
+		
   end
   
   

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110820190826) do
+ActiveRecord::Schema.define(:version => 20110820213037) do
 
   create_table "challenges", :force => true do |t|
     t.string   "challenge_name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110820190826) do
     t.integer  "user_id"
     t.integer  "started_by"
     t.integer  "completed_by"
+    t.date     "complete_date"
   end
 
   create_table "hookups", :force => true do |t|
