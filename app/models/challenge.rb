@@ -11,7 +11,15 @@ class Challenge < ActiveRecord::Base
 	    Challenge.where :user_id => user.id
 	  end
 	end
-		    
+	
+
+  def self.complete?
+	if self.complete = true
+	  return true
+	else 
+	  return false
+  end
+	
 
 #App ID: 142270179193416
 #App Secret: f6beeedb769017dd7c6c45dd50706c1d 

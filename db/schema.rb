@@ -10,22 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816043648) do
+ActiveRecord::Schema.define(:version => 20110820190826) do
 
   create_table "challenges", :force => true do |t|
     t.string   "challenge_name"
-    t.string   "challenge_type"
     t.date     "challenge_date"
     t.date     "due_date"
     t.string   "wager"
-    t.integer  "wager_qty"
-    t.string   "challenger_name"
-    t.string   "challenger_email"
     t.boolean  "complete"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "started_by"
+    t.integer  "completed_by"
   end
 
   create_table "hookups", :force => true do |t|

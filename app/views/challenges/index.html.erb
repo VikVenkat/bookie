@@ -20,12 +20,14 @@
   <tr>
     <td><%= c.challenge_name %></td>
     <td><%= c.wager %></td>	
-	<td><%= c.started_by %></td>	
+	<td><%= User.where(:id => c.started_by).first.email %></td>	
     <td><%= c.challenge_date %></td>
     <td><%= c.due_date %></td>
 	<td><%= link_to 'Accept Challenge', hookups_path(:challenge_id => c), :method => :post %></td>
-	<td><%#= c.find.all.count %></td>
-    <td><%= c.complete %></td>
+	<td><%#= User.includes(:hookups).where(:challenge_id => c.id ).count %></td>
+    <td><%= if c.complete? then %> Finished by <%= User.where(:id => c.completed_by).first.email %>
+		<%= else link_to 'Completed Challenge', challenges_path(:id => c, :complete => true), :method => :put %>
+		<% end %></td>
 
     <td><%= link_to 'Show', c %></td>
     <td><%= link_to 'Edit', edit_challenge_path(c) %></td>

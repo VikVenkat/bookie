@@ -17,7 +17,8 @@ gem 'devise'
 #Use Heroku web server
 gem 'heroku'
 
-
+# Use this to push databse stuff to Heroku
+gem 'taps'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

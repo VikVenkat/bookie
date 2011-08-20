@@ -37,7 +37,6 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.find(params[:id])
   end
   
-  # need a method for when someone accepts a challenge
 
   # POST /challenges
   # POST /challenges.xml
@@ -66,11 +65,27 @@ class ChallengesController < ApplicationController
     end
   end
 
+  #complete a challenge
+  
+  def complete
+    @challenge = Challenge.find(params[:id])
+	
+	if params[:complete] => true
+	  @challenge.complete = true
+	else if params[:complete] => false
+	  @challenge.complete = false
+	else   
+	
+	end
+	
+  end
+  
+  
   # PUT /challenges/1
   # PUT /challenges/1.xml
   def update
     @challenge = Challenge.find(params[:id])
-
+	
     respond_to do |format|
       if @challenge.update_attributes(params[:challenge])
         format.html { redirect_to(@challenge, :notice => 'Challenge was successfully updated.') }

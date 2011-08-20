@@ -1,10 +1,9 @@
 <center>
 <h1>Drop the Gauntlet</h1>
 <br>
-<small>Insert Devise Script Here - Fbgraph/oauth2?</small>
 
 <% if user_signed_in? %>
-<h3> Hello, <%= User.name %> </h3>
+<h3> Hello, <%= current_user.email %> </h3>
 <% else %>
 <h3>First, 
 <%= link_to('Rep yoself', new_user_registration_path)  %>
@@ -14,20 +13,8 @@
 
 
 <% if user_signed_in? %>
-<%#= render 'challenges/form' %>
+<%= render 'challenges/form' %>
 
-<table>
-	<tr>
-		<th> The challenge: </th>
-		<th> The wager: </th>
-	</tr>
-	<tr>	
-		<td><input></td>
-		<td><input></td>
-	</tr>
-</table>
-<br><br>
-<input_type 'submit'>Publish!
 <% end %>
 
 <h3> Or, view current 
