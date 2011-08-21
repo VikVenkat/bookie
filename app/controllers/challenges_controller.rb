@@ -45,6 +45,7 @@ class ChallengesController < ApplicationController
 	
 	@challenge.challenge_date = Date.today
 	@challenge.due_date = Date.today + 7
+	@challenge.complete = false
 	
 	#for Devise
 	if user_signed_in?
@@ -66,6 +67,7 @@ class ChallengesController < ApplicationController
   end
 
   #complete a challenge
+  #PUT challenges/:id/complete
   
   def complete
     @challenge = Challenge.find(params[:id])
