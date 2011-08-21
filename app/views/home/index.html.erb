@@ -1,12 +1,17 @@
 <center>
-<h1>Drop the Gauntlet</h1>
-<br>
+<%= image_tag ("/images/bookie.png") %>
+<div id="container">
 
+<h1>Drop the Gauntlet</h1>
+<h2>Challenge anyone to anything </h2>
+</br>
+
+<div id="main">
 <% if user_signed_in? %>
 <h3> Hello, <%= current_user.email %> </h3>
 <% else %>
 <h3>First, 
-<%= link_to('Rep yoself', new_user_registration_path)  %>
+<%= link_to('Who u b?', new_user_registration_path)  %>
 </h3>
 <% end %>
 
@@ -16,9 +21,11 @@
 <%= render 'challenges/form' %>
 
 <% end %>
-
-
+</div>
+<% if user_signed_in? %>
 <%= render 'challenges/current' %>
+<% end %>
 <%= render 'challenges/open' %>
 </center>
+</div>
 

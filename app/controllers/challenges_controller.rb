@@ -72,12 +72,16 @@ class ChallengesController < ApplicationController
   def complete
     @challenge = Challenge.find(params[:id])
 	
-	@challenge.complete = true
-	@challenge.completed_by = current_user.id
-	@challenge.save
-	flash[:notice] = "Completed Challenge."
-	redirect_to root_path
-
+	if user_signed_in?
+		@challenge.complete = true
+		@challenge.completed_by = current_user.id
+		@challenge.save
+		flash[:notice] = "Completed Challenge."
+		redirect_to root_path
+	else
+		flash[:notice] = "You have to sign in first!"
+		redirect_to root_path
+	end
 		
   end
   
