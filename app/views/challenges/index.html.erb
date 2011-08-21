@@ -1,44 +1,49 @@
 <h1>Listing Challenges</h1>
- 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Wager</th>
-	<th>Created by</th>	
-    <th>Date</th>
-    <th>Due Date</th>
-	<th>Accept this</th>
-	<th># Challengers</th>
-    <th>Complete?</th>
-	
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
- 
-<% @challenges.each do |c| %>
-  <tr>
-    <td><%= c.challenge_name %></td>
-    <td><%= c.wager %></td>	
-	<td><%= User.where(:id => c.started_by).first.email %></td>	
-    <td><%= c.challenge_date %></td>
-    <td><%= c.due_date %></td>
-	<td><%= link_to 'Accept Challenge', hookups_path(:challenge_id => c), :method => :post %></td>
-	<td><%#= User.includes(:hookups).where(:challenge_id => c.id ).count %></td>
-    <td><% if c.complete? then %> Finished by 
-		<%= User.where(:id => c.completed_by).first.email %>
-		<% else %>
-		<%= link_to 'Completed Challenge', complete_challenge_path(:id => c), :method => :put %>
-		<% end %></td>
 
-    <td><%= link_to 'Show', c %></td>
-    <td><%= link_to 'Edit', edit_challenge_path(c) %></td>
-    <td><%= link_to 'Kill', c, :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+ 
+	<table>
+	  <tr>
+		<th>Name</th>
+		<th>Wager</th>
+		<th>Created by</th>	
+		<th>Date</th>
+		<th>Due Date</th>
+		<th>Accept this</th>
+		<th># Challengers</th>
+		<th>Complete?</th>
+		
+		<th></th>
+		<th></th>
+		<th></th>
+	  </tr>
+	 
+	<%#= @challenges.each do |c| %>
+	<% Challenge.editable_by(current_user).each do |c| %>
+	  <tr>
+		<td><%= c.challenge_name %></td>
+		<td><%= c.wager %></td>	
+		<td><%= User.where(:id => c.started_by).first.email %></td>	
+		<td><%= c.challenge_date %></td>
+		<td><%= c.due_date %></td>
+		<td><%= link_to 'Accept Challenge', hookups_path(:challenge_id => c), :method => :post %></td>
+		<td><%#= User.includes(:hookups).where(:challenge_id => c.id ).count %></td>
+		<td><% if c.complete? then %> Finished by 
+			<%= User.where(:id => c.completed_by).first.email %>
+			<% else %>
+			<%= link_to 'Completed Challenge', complete_challenge_path(:id => c), :method => :put %>
+			<% end %></td>
 
-<br />
+		<td><%= link_to 'Show', c %></td>
+		<td><%= link_to 'Edit', edit_challenge_path(c) %></td>
+		<td><%= link_to 'Kill', c, :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+
+
 
 <%= link_to 'New Challenge', new_challenge_path %>
 <%= link_to 'Home', root_path %>

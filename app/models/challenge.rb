@@ -10,6 +10,7 @@ class Challenge < ActiveRecord::Base
 	  else
 	    Challenge.where :user_id => user.id
 	  end
+	  
 	end
 	
 
