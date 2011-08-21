@@ -1,0 +1,1 @@
+{"local_tables_info":{"users":4,"hookups":11,"challenges":5,"schema_migrations":10},"database_url":"sqlite://db/development.sqlite3","remote_url":"http://heroku:osui59a24am79x@taps3.heroku.com","session_uri":"/sessions/9647801873","klass":"Taps::Push","stream_state":{},"completed_tables":["hookups","schema_migrations","users","challenges"],"table_filter":null}

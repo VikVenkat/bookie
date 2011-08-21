@@ -1,0 +1,13 @@
+<h3> Open challenges</h3>
+<%= Challenge.where(:complete => false).each do |c| %>
+<div id = "open">
+</br>
+  <%= User.where(:id => c.started_by).first.email %>
+  bet <b><%= c.wager %></b> for someone to <b><%= c.challenge_name %></b> by <b><%= c.due_date %></b></br>
+	<%= link_to 'Accept Challenge', hookups_path(:challenge_id => c), :method => :post %>
+	<%= link_to 'Completed Challenge', complete_challenge_path(:id => c), :method => :put %>
+</br>
+</br>
+</div>
+</br>
+<% end %>
