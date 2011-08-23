@@ -1,0 +1,15 @@
+# config/facebook.yml
+development:
+  app_id: 142270179193416
+  secret_key: f6beeedb769017dd7c6c45dd50706c1d
+test:
+  app_id: 142270179193416
+  secret_key: f6beeedb769017dd7c6c45dd50706c1d
+production:
+  app_id: 142270179193416
+  secret_key: f6beeedb769017dd7c6c45dd50706c1d
+
+
+#App ID: 142270179193416
+#App Secret: f6beeedb769017dd7c6c45dd50706c1d 
+#Access Token: 142270179193416|2.AQAMuSE2pBMrQeD9.3600.1313298000.0-121146|SRkRQBnNM22oOUmz-eCtuXLPtmw
