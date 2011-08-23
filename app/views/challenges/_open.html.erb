@@ -1,5 +1,5 @@
 <h3> Open challenges</h3>
-<%= Challenge.where(:complete => false).each do |c| %>
+<% Challenge.where(:complete => false).each do |c| %>
 <div id = "open">
 </br>
   <%= User.where(:id => c.started_by).first.email %>
