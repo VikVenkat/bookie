@@ -43,6 +43,9 @@ GEM
       rest-client (~> 1.6.1)
       term-ansicolor (~> 1.0.5)
     i18n (0.5.0)
+    koala (1.1.0)
+      multi_json (~> 1.0)
+      multipart-post (~> 1.0)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     mail (2.2.19)
@@ -51,6 +54,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    multi_json (1.0.3)
+    multipart-post (1.1.3)
     orm_adapter (0.0.5)
     polyglot (0.3.1)
     rack (1.2.3)
@@ -100,6 +105,7 @@ PLATFORMS
 DEPENDENCIES
   devise
   heroku
+  koala
   rails (= 3.0.7)
   rake (= 0.8.7)
   sqlite3

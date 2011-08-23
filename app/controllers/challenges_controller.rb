@@ -113,4 +113,18 @@ class ChallengesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  #try the graph w Koala
+  require 'koala'
+
+  def getpic
+    # first, initialize a Graph API with your token
+	@graph = Koala::Facebook::GraphAPI.new
+	#@graph = Koala::Facebook::GraphAPI.new(142270179193416|2.AQAMuSE2pBMrQeD9.3600.1313298000.0-121146|SRkRQBnNM22oOUmz-eCtuXLPtmw) # pre 1.2beta
+	#@graph = Koala::Facebook::API.new(your_oauth_token) # 1.2beta and beyond
+	
+	# http://graph.facebook.com/:fbname/picture
+	@graph.get_picture("vik.venkat")
+  
+  end
 end

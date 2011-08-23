@@ -9,6 +9,7 @@
 <div id="main">
 <% if user_signed_in? %>
 <h3> Hello, <%= current_user.email %> </h3>
+<%#= image_tag getpic_path(:id => current_user.id), :method => :get %>
 <% else %>
 <h3>First, 
 <%= link_to('Who u b?', new_user_registration_path)  %>

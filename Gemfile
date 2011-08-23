@@ -10,6 +10,9 @@ gem "rake", "0.8.7"
 #this still seems to be breaking
 # gem 'fbgraph'
 
+#see if this fbook framework is better
+gem 'koala'
+
 gem 'sqlite3'
 
 gem 'devise'
