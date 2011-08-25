@@ -1,0 +1,22 @@
+<h3> Accepted challenges</h3>
+<% Hookup.where(:user_id => current_user.id).each do |h| %>
+	<% Challenge.where(:id => h.challenge_id).each do |c| %>
+		<div id = "open">
+		  You accepted 
+		  <%= User.where(:id => c.started_by).first.email %>'s
+		  challenge to <b><%= c.wager %></b> to <b><%= c.challenge_name %></b> by <b><%= c.due_date %></b>.</br>
+
+		  <% if c.complete? then %> Finished by <b>
+			<%= User.where(:id => c.completed_by).first.email %>
+			</b> on <b><%= c.complete_date %></b>
+		  
+		  <% else %>
+		  	<%= link_to 'Completed Challenge', complete_challenge_path(:id => c), :method => :put %>
+
+		  
+		  <% end %>
+
+		</div>
+		</br>
+	<% end %>
+<% end %>

@@ -1,5 +1,5 @@
 <center>
-<%= image_tag ("bookie.png") %>
+<%= image_tag "bookie.png" %>
 <div id="container">
 
 <h1>Drop the Gauntlet</h1>
@@ -25,6 +25,7 @@
 </div>
 <% if user_signed_in? %>
 <%= render 'challenges/current' %>
+<%= render 'challenges/accept' %>
 <% end %>
 <%= render 'challenges/open' %>
 </center>
