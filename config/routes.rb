@@ -9,6 +9,9 @@ Bookie::Application.routes.draw do
   put 'challenges/:id/complete' => 'challenges#complete', :as => 'complete_challenge'
    
   get 'challenges/:id/getpic' => 'challenges#getpic', :as => 'getpic' 
+  
+  #match '/hookups' => 'hookups#index'
+  
   #match '/challenges?:complete' => 'challenges#complete'
   # The priority is based upon order of creation:
   # first created -> highest priority.
