@@ -12342,3 +12342,83 @@ Rendered devise/_registration_items.html.erb (65.0ms)
 Rendered devise/_login_items.html.erb (2.0ms)
 Rendered home/index.html.erb within layouts/application (547.0ms)
 Completed 200 OK in 627ms (Views: 586.0ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/users/sign_out" for 127.0.0.1 at Sat Aug 27 12:28:39 -0400 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AnCfAOd5DEbAU0cNfXOaqmqS5v+Wyv2LG4QjYp0uL6I="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 12:28:39 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_open.html.erb (201.0ms)
+Rendered devise/_registration_items.html.erb (3.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered home/index.html.erb within layouts/application (291.0ms)
+Completed 200 OK in 367ms (Views: 336.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/challenges/7/complete" for 127.0.0.1 at Sat Aug 27 12:28:45 -0400 2011
+  Processing by ChallengesController#complete as HTML
+  Parameters: {"authenticity_token"=>"kZ8kzxwITyFBqoXzkf0mCZUr/BOowYjOWJrmQp7fcO8=", "id"=>"7"}
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 12:28:45 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_open.html.erb (100.0ms)
+Rendered devise/_registration_items.html.erb (3.0ms)
+Rendered devise/_login_items.html.erb (4.0ms)
+Rendered home/index.html.erb within layouts/application (192.0ms)
+Completed 200 OK in 346ms (Views: 239.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/challenges/10/complete" for 127.0.0.1 at Sat Aug 27 12:28:56 -0400 2011
+  Processing by ChallengesController#complete as HTML
+  Parameters: {"authenticity_token"=>"kZ8kzxwITyFBqoXzkf0mCZUr/BOowYjOWJrmQp7fcO8=", "id"=>"10"}
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 12:28:57 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_open.html.erb (170.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (247.0ms)
+Completed 200 OK in 317ms (Views: 291.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/challenges/7/complete" for 127.0.0.1 at Sat Aug 27 12:29:50 -0400 2011
+  Processing by ChallengesController#complete as HTML
+  Parameters: {"authenticity_token"=>"kZ8kzxwITyFBqoXzkf0mCZUr/BOowYjOWJrmQp7fcO8=", "id"=>"7"}
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7 LIMIT 1[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 60ms
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Sat Aug 27 12:29:50 -0400 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/_registration_items.html.erb (3.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (203.0ms)
+Completed 200 OK in 288ms (Views: 251.0ms | ActiveRecord: 0.0ms)

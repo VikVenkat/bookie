@@ -80,7 +80,7 @@ class ChallengesController < ApplicationController
 		redirect_to root_path
 	else
 		flash[:notice] = "You have to sign in first!"
-		redirect_to root_path
+		redirect_to new_user_registration_path
 	end
 		
   end
