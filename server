@@ -1,0 +1,287 @@
+Script started on Sat 27 Aug 2011 02:53:55 PM EDT
+]0;vik@ubuntu: ~/Rails/bookievik@ubuntu:~/Rails/bookie$ webrick
+webrick: command not found
+]0;vik@ubuntu: ~/Rails/bookievik@ubuntu:~/Rails/bookie$ rails -v
+Rails 2.3.5
+]0;vik@ubuntu: ~/Rails/bookievik@ubuntu:~/Rails/bookie$ rails -v[1Pwebricksu[Kpwdwho[1Psuapt-get install curl git-core build-essential zlib1g-dev  libssl-dev libreadline5-dev[Asu[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cwhopwd[1Psuwebrickrails -v[Krails -v[Kbundle install
+Using rake (0.8.7) 
+Using abstract (1.0.0) 
+Using activesupport (3.0.7) 
+Using builder (2.1.2) 
+Using i18n (0.5.0) 
+Using activemodel (3.0.7) 
+Using erubis (2.6.6) 
+Using rack (1.2.3) 
+Using rack-mount (0.6.14) 
+Using rack-test (0.5.7) 
+Using tzinfo (0.3.28) 
+Using actionpack (3.0.7) 
+Using mime-types (1.16) 
+Using polyglot (0.3.1) 
+Using treetop (1.4.9) 
+Using mail (2.2.19) 
+Using actionmailer (3.0.7) 
+Using arel (2.0.10) 
+Using activerecord (3.0.7) 
+Using activeresource (3.0.7) 
+Using addressable (2.2.6) 
+Using bcrypt-ruby (2.1.4) 
+Using bundler (1.0.18) 
+Using orm_adapter (0.0.5) 
+Using warden (1.0.5) 
+Using devise (1.4.2) 
+Using launchy (2.0.5) 
+Using rest-client (1.6.3) 
+Using term-ansicolor (1.0.6) 
+Using heroku (2.4.1) 
+Using multi_json (1.0.3) 
+Using multipart-post (1.1.3) 
+Using koala (1.1.0) 
+Using thor (0.14.6) 
+Using railties (3.0.7) 
+Using rails (3.0.7) 
+Using sequel (3.20.0) 
+Using sinatra (1.0) 
+Using sqlite3 (1.3.3) 
+Using sqlite3-ruby (1.3.3) 
+Using taps (0.3.23) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+]0;vik@ubuntu: ~/Rails/bookievik@ubuntu:~/Rails/bookie$ bash < <( curl http://rvm.beginrescueend.com/releases/rv m-install-head )
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   184  100   184    0     0    443      0 --:--:-- --:--:-- --:--:--  1614
+bash: line 1: html: No such file or directory
+bash: line 2: syntax error near unexpected token `<'
+bash: line 2: `<head><title>301 Moved Permanently</title></head>'
+]0;vik@ubuntu: ~/Rails/bookievik@ubuntu:~/Rails/bookie$ rvm notes
+No command 'rvm' found, but there are 19 similar ones
+rvm: command not found
+]0;vik@ubuntu: ~/Rails/bookievik@ubuntu:~/Rails/bookie$ cd ..
+]0;vik@ubuntu: ~/Railsvik@ubuntu:~/Rails$ cd ..rvm notes
+No command 'rvm' found, but there are 19 similar ones
+rvm: command not found
+]0;vik@ubuntu: ~/Railsvik@ubuntu:~/Rails$ bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+Cloning into rvm...
+remote: Counting objects: 5441, done.[K
+remote: Compressing objects:   0% (1/2573)   [Kremote: Compressing objects:   1% (26/2573)   [Kremote: Compressing objects:   2% (52/2573)   [Kremote: Compressing objects:   3% (78/2573)   [Kremote: Compressing objects:   4% (103/2573)   [Kremote: Compressing objects:   5% (129/2573)   [Kremote: Compressing objects:   6% (155/2573)   [Kremote: Compressing objects:   7% (181/2573)   [Kremote: Compressing objects:   8% (206/2573)   [Kremote: Compressing objects:   9% (232/2573)   [Kremote: Compressing objects:  10% (258/2573)   [Kremote: Compressing objects:  11% (284/2573)   [Kremote: Compressing objects:  12% (309/2573)   [Kremote: Compressing objects:  13% (335/2573)   [Kremote: Compressing objects:  14% (361/2573)   [Kremote: Compressing objects:  15% (386/2573)   [Kremote: Compressing objects:  16% (412/2573)   [Kremote: Compressing objects:  17% (438/2573)   [Kremote: Compressing objects:  18% (464/2573)   [Kremote: Compressing objects:  19% (489/2573)   [Kremote: Compressing objects:  20% (515/2573)   [Kremote: Compressing objects:  21% (541/2573)   [Kremote: Compressing objects:  22% (567/2573)   [Kremote: Compressing objects:  23% (592/2573)   [Kremote: Compressing objects:  24% (618/2573)   [Kremote: Compressing objects:  25% (644/2573)   [Kremote: Compressing objects:  26% (669/2573)   [Kremote: Compressing objects:  27% (695/2573)   [Kremote: Compressing objects:  28% (721/2573)   [Kremote: Compressing objects:  29% (747/2573)   [Kremote: Compressing objects:  30% (772/2573)   [Kremote: Compressing objects:  31% (798/2573)   [Kremote: Compressing objects:  32% (824/2573)   [Kremote: Compressing objects:  33% (850/2573)   [Kremote: Compressing objects:  34% (875/2573)   [Kremote: Compressing objects:  35% (901/2573)   [Kremote: Compressing objects:  36% (927/2573)   [Kremote: Compressing objects:  37% (953/2573)   [Kremote: Compressing objects:  38% (978/2573)   [Kremote: Compressing objects:  39% (1004/2573)   [Kremote: Compressing objects:  40% (1030/2573)   [Kremote: Compressing objects:  40% (1042/2573)   [Kremote: Compressing objects:  41% (1055/2573)   [Kremote: Compressing objects:  42% (1081/2573)   [Kremote: Compressing objects:  43% (1107/2573)   [Kremote: Compressing objects:  44% (1133/2573)   [Kremote: Compressing objects:  45% (1158/2573)   [Kremote: Compressing objects:  46% (1184/2573)   [Kremote: Compressing objects:  47% (1210/2573)   [Kremote: Compressing objects:  48% (1236/2573)   [Kremote: Compressing objects:  49% (1261/2573)   [Kremote: Compressing objects:  50% (1287/2573)   [Kremote: Compressing objects:  51% (1313/2573)   [Kremote: Compressing objects:  52% (1338/2573)   [Kremote: Compressing objects:  53% (1364/2573)   [Kremote: Compressing objects:  54% (1390/2573)   [Kremote: Compressing objects:  55% (1416/2573)   [Kremote: Compressing objects:  56% (1441/2573)   [Kremote: Compressing objects:  57% (1467/2573)   [Kremote: Compressing objects:  58% (1493/2573)   [Kremote: Compressing objects:  59% (1519/2573)   [Kremote: Compressing objects:  60% (1544/2573)   [Kremote: Compressing objects:  61% (1570/2573)   [Kremote: Compressing objects:  62% (1596/2573)   [Kremote: Compressing objects:  63% (1621/2573)   [Kremote: Compressing objects:  64% (1647/2573)   [Kremote: Compressing objects:  65% (1673/2573)   [Kremote: Compressing objects:  66% (1699/2573)   [Kremote: Compressing objects:  67% (1724/2573)   [Kremote: Compressing objects:  68% (1750/2573)   [Kremote: Compressing objects:  69% (1776/2573)   [Kremote: Compressing objects:  70% (1802/2573)   [Kremote: Compressing objects:  71% (1827/2573)   [Kremote: Compressing objects:  72% (1853/2573)   [Kremote: Compressing objects:  73% (1879/2573)   [Kremote: Compressing objects:  74% (1905/2573)   [Kremote: Compressing objects:  75% (1930/2573)   [Kremote: Compressing objects:  76% (1956/2573)   [Kremote: Compressing objects:  77% (1982/2573)   [Kremote: Compressing objects:  78% (2007/2573)   [Kremote: Compressing objects:  79% (2033/2573)   [Kremote: Compressing objects:  80% (2059/2573)   [Kremote: Compressing objects:  81% (2085/2573)   [Kremote: Compressing objects:  82% (2110/2573)   [Kremote: Compressing objects:  83% (2136/2573)   [Kremote: Compressing objects:  84% (2162/2573)   [Kremote: Compressing objects:  85% (2188/2573)   [Kremote: Compressing objects:  86% (2213/2573)   [Kremote: Compressing objects:  87% (2239/2573)   [Kremote: Compressing objects:  88% (2265/2573)   [Kremote: Compressing objects:  89% (2290/2573)   [Kremote: Compressing objects:  90% (2316/2573)   [Kremote: Compressing objects:  91% (2342/2573)   [Kremote: Compressing objects:  92% (2368/2573)   [Kremote: Compressing objects:  93% (2393/2573)   [Kremote: Compressing objects:  94% (2419/2573)   [Kremote: Compressing objects:  95% (2445/2573)   [Kremote: Compressing objects:  96% (2471/2573)   [Kremote: Compressing objects:  97% (2496/2573)   [Kremote: Compressing objects:  98% (2522/2573)   [Kremote: Compressing objects:  99% (2548/2573)   [Kremote: Compressing objects: 100% (2573/2573)   [Kremote: Compressing objects: 100% (2573/2573), done.[K
+Receiving objects:   0% (1/5441)   Receiving objects:   1% (55/5441)   Receiving objects:   2% (109/5441)   Receiving objects:   3% (164/5441)   Receiving objects:   4% (218/5441)   Receiving objects:   5% (273/5441)   Receiving objects:   6% (327/5441)   Receiving objects:   7% (381/5441)   Receiving objects:   7% (417/5441), 348.00 KiB | 315 KiB/s   Receiving objects:   7% (417/5441), 588.00 KiB | 275 KiB/s   Receiving objects:   8% (436/5441), 588.00 KiB | 275 KiB/s   Receiving objects:   9% (490/5441), 588.00 KiB | 275 KiB/s   Receiving objects:  10% (545/5441), 588.00 KiB | 275 KiB/s   Receiving objects:  11% (599/5441), 716.00 KiB | 267 KiB/s   Receiving objects:  12% (653/5441), 716.00 KiB | 267 KiB/s   Receiving objects:  12% (685/5441), 716.00 KiB | 267 KiB/s   Receiving objects:  13% (708/5441), 716.00 KiB | 267 KiB/s   Receiving objects:  14% (762/5441), 852.00 KiB | 264 KiB/s   Receiving objects:  15% (817/5441), 852.00 KiB | 264 KiB/s   Receiving objects:  16% (871/5441), 852.00 KiB | 264 KiB/s   Receiving objects:  17% (925/5441), 852.00 KiB | 264 KiB/s   Receiving objects:  18% (980/5441), 852.00 KiB | 264 KiB/s   Receiving objects:  19% (1034/5441), 852.00 KiB | 264 KiB/s   Receiving objects:  20% (1089/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  21% (1143/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  22% (1198/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  23% (1252/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  23% (1276/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  24% (1306/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  25% (1361/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  26% (1415/5441), 988.00 KiB | 261 KiB/s   Receiving objects:  27% (1470/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  28% (1524/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  29% (1578/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  30% (1633/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  31% (1687/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  32% (1742/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  33% (1796/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  34% (1850/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  35% (1905/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  36% (1959/5441), 1.04 MiB | 249 KiB/s   Receiving objects:  37% (2014/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  38% (2068/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  39% (2122/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  40% (2177/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  41% (2231/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  41% (2252/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  42% (2286/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  43% (2340/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  44% (2395/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  45% (2449/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  46% (2503/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  47% (2558/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  48% (2612/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  49% (2667/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  50% (2721/5441), 1.13 MiB | 240 KiB/s   Receiving objects:  51% (2775/5441), 1.21 MiB | 220 KiB/s   Receiving objects:  52% (2830/5441), 1.21 MiB | 220 KiB/s   Receiving objects:  53% (2884/5441), 1.21 MiB | 220 KiB/s   Receiving objects:  54% (2939/5441), 1.21 MiB | 220 KiB/s   Receiving objects:  55% (2993/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  56% (3047/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  57% (3102/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  58% (3156/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  58% (3203/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  59% (3211/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  60% (3265/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  61% (3320/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  62% (3374/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  63% (3428/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  64% (3483/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  65% (3537/5441), 1.30 MiB | 207 KiB/s   Receiving objects:  66% (3592/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  67% (3646/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  68% (3700/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  69% (3755/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  70% (3809/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  71% (3864/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  72% (3918/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  73% (3972/5441), 1.41 MiB | 203 KiB/s   Receiving objects:  74% (4027/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  75% (4081/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  75% (4111/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  76% (4136/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  77% (4190/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  78% (4244/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  79% (4299/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  80% (4353/5441), 1.55 MiB | 211 KiB/s   Receiving objects:  81% (4408/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  82% (4462/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  83% (4517/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  84% (4571/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  85% (4625/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  86% (4680/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  87% (4734/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  88% (4789/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  89% (4843/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  90% (4897/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  91% (4952/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  92% (5006/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  93% (5061/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  94% (5115/5441), 1.67 MiB | 210 KiB/s   Receiving objects:  95% (5169/5441), 1.80 MiB | 212 KiB/s   Receiving objects:  96% (5224/5441), 1.80 MiB | 212 KiB/s   Receiving objects:  97% (5278/5441), 1.80 MiB | 212 KiB/s   Receiving objects:  98% (5333/5441), 1.80 MiB | 212 KiB/s   Receiving objects:  98% (5354/5441), 1.80 MiB | 212 KiB/s   Receiving objects:  99% (5387/5441), 1.80 MiB | 212 KiB/s   remote: Total 5441 (delta 3541), reused 3897 (delta 2146)[K
+Receiving objects: 100% (5441/5441), 1.80 MiB | 212 KiB/s   Receiving objects: 100% (5441/5441), 1.85 MiB | 207 KiB/s, done.
+Resolving deltas:   0% (0/3541)   Resolving deltas:   1% (52/3541)   Resolving deltas:   2% (78/3541)   Resolving deltas:   3% (125/3541)   Resolving deltas:   6% (229/3541)   Resolving deltas:   7% (264/3541)   Resolving deltas:   8% (314/3541)   Resolving deltas:   9% (337/3541)   Resolving deltas:  10% (359/3541)   Resolving deltas:  11% (390/3541)   Resolving deltas:  12% (453/3541)   Resolving deltas:  13% (467/3541)   Resolving deltas:  14% (496/3541)   Resolving deltas:  15% (534/3541)   Resolving deltas:  16% (580/3541)   Resolving deltas:  17% (610/3541)   Resolving deltas:  19% (691/3541)   Resolving deltas:  20% (715/3541)   Resolving deltas:  21% (749/3541)   Resolving deltas:  22% (786/3541)   Resolving deltas:  23% (816/3541)   Resolving deltas:  24% (851/3541)   Resolving deltas:  25% (887/3541)   Resolving deltas:  26% (930/3541)   Resolving deltas:  27% (983/3541)   Resolving deltas:  28% (996/3541)   Resolving deltas:  29% (1035/3541)   Resolving deltas:  30% (1085/3541)   Resolving deltas:  31% (1099/3541)   Resolving deltas:  32% (1164/3541)   Resolving deltas:  33% (1173/3541)   Resolving deltas:  34% (1233/3541)   Resolving deltas:  36% (1276/3541)   Resolving deltas:  39% (1383/3541)   Resolving deltas:  40% (1430/3541)   Resolving deltas:  41% (1454/3541)   Resolving deltas:  42% (1488/3541)   Resolving deltas:  43% (1534/3541)   Resolving deltas:  44% (1565/3541)   Resolving deltas:  45% (1618/3541)   Resolving deltas:  46% (1630/3541)   Resolving deltas:  49% (1744/3541)   Resolving deltas:  52% (1865/3541)   Resolving deltas:  53% (1899/3541)   Resolving deltas:  54% (1935/3541)   Resolving deltas:  55% (1977/3541)   Resolving deltas:  58% (2077/3541)   Resolving deltas:  59% (2109/3541)   Resolving deltas:  60% (2126/3541)   Resolving deltas:  61% (2163/3541)   Resolving deltas:  62% (2223/3541)   Resolving deltas:  63% (2232/3541)   Resolving deltas:  64% (2275/3541)   Resolving deltas:  65% (2309/3541)   Resolving deltas:  67% (2387/3541)   Resolving deltas:  68% (2409/3541)   Resolving deltas:  69% (2456/3541)   Resolving deltas:  70% (2490/3541)   Resolving deltas:  71% (2518/3541)   Resolving deltas:  72% (2551/3541)   Resolving deltas:  73% (2590/3541)   Resolving deltas:  74% (2623/3541)   Resolving deltas:  75% (2659/3541)   Resolving deltas:  76% (2719/3541)   Resolving deltas:  77% (2738/3541)   Resolving deltas:  78% (2763/3541)   Resolving deltas:  79% (2799/3541)   Resolving deltas:  80% (2840/3541)   Resolving deltas:  81% (2875/3541)   Resolving deltas:  83% (2941/3541)   Resolving deltas:  84% (2991/3541)   Resolving deltas:  85% (3011/3541)   Resolving deltas:  86% (3046/3541)   Resolving deltas:  90% (3189/3541)   Resolving deltas:  91% (3243/3541)   Resolving deltas:  93% (3313/3541)   Resolving deltas:  94% (3338/3541)   Resolving deltas:  95% (3370/3541)   Resolving deltas:  96% (3405/3541)   Resolving deltas:  97% (3442/3541)   Resolving deltas:  98% (3476/3541)   Resolving deltas:  99% (3509/3541)   Resolving deltas: 100% (3541/3541)   Resolving deltas: 100% (3541/3541), done.
+
+  RVM:  Shell scripts enabling management of multiple ruby environments.
+  RTFM: https://rvm.beginrescueend.com/
+  HELP: http://webchat.freenode.net/?channels=rvm (#rvm on irc.freenode.net)
+  
+Installing RVM to /home/vik/.rvm/
+    Correct permissions for base binaries in /home/vik/.rvm/bin...
+    Copying manpages into place.
+
+
+Notes for Linux ( DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=11.04
+DISTRIB_CODENAME=natty
+DISTRIB_DESCRIPTION="Ubuntu 11.04" )
+
+NOTE: 'ruby' represents Matz's Ruby Interpreter (MRI) (1.8.X, 1.9.X)
+             This is the *original* / standard Ruby Language Interpreter
+      'ree'  represents Ruby Enterprise Edition
+      'rbx'  represents Rubinius
+
+bash >= 3.2 is required
+curl is required
+git is required (>= 1.7 recommended)
+patch is required (for ree and some ruby-head's).
+
+If you wish to install rbx and/or Ruby 1.9 head (MRI) (eg. 1.9.2-head),
+then you must install and use rvm 1.8.7 first.
+
+If you wish to have the 'pretty colors' again,
+  set 'export rvm_pretty_print_flag=1' in ~/.rvmrc.
+
+dependencies:
+# For RVM
+  rvm: bash curl git
+
+# For Ruby (MRI, Rubinius, & REE)  you should install the following OS dependencies:
+  ruby: /usr/bin/apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake
+
+# For JRuby (if you wish to use it) you will need:
+  jruby: /usr/bin/apt-get install curl g++ openjdk-6-jre-headless
+  jruby-head: /usr/bin/apt-get install ant openjdk-6-jdk
+
+# In addition to ruby: dependencies,
+  ruby-head: subversion
+
+# For IronRuby (if you wish to use it) you will need:
+  ironruby: /usr/bin/apt-get install curl mono-2.0-devel
+
+[32mNOTE:[0m
+As of 1.8.0 RVM once again loads .rvmrc files, by default, after asking your
+permission to trust it of course.  If you do not wish to be enabled, simply set:
+    export rvm_project_rvmrc=0
+Within either your /etc/rvmrc or $HOME/.rvmrc file. This will turn off the
+cd/pushd hooks when sourcing the rvm() function into your shell.
+
+
+ [32mExample: echo 'export rvm_project_rvmrc=0' >> $HOME/.rvmrc;
+ (Then close the current shel and open a new one.)[0m
+
+
+  You must now complete the install by loading RVM in new shells.
+
+  If you wish to use RVM in an interactive fashion in your shells then
+  Place the following line at the end of your shell's loading files
+  (.bashrc or .bash_profile for bash and .zshrc for zsh),
+  after all PATH/variable settings:
+
+  [[ -s "/home/vik/.rvm/scripts/rvm" ]] && source "/home/vik/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+  You only need to add this line the first time you install RVM.
+
+  If you are choosing to source RVM into your environment to switch current
+  shell environments, be sure to close this shell and open a new one so that
+  the RVM functions load.
+
+
+Installation of RVM to /home/vik/.rvm/ is complete.
+
+
+Vik Venkatraman,
+
+If you have any questions, issues and/or ideas for improvement please
+fork the project and issue a pull request.
+
+If you wish to disable the project .rvmrc file functionality, set
+rvm_project_rvmrc=0 in either /etc/rvmrc or ~/.rvmrc.
+
+Thank you for using RVM!
+
+I sincerely hope that RVM helps to make your life easier and more enjoyable!!!
+
+  ~Wayne
+
+]0;vik@ubuntu: ~/Railsvik@ubuntu:~/Rails$ cd ..
+]0;vik@ubuntu: ~vik@ubuntu:~$ cd ..
+]0;vik@ubuntu: /homevik@ubuntu:/home$ cd ..
+]0;vik@ubuntu: /vik@ubuntu:/$ pwd
+/
+]0;vik@ubuntu: /vik@ubuntu:/$ dir
+bin    dev   host	 lib64	     mnt   root     srv  usr
+boot   etc   initrd.img  lost+found  opt   sbin     sys  var
+cdrom  home  lib	 media	     proc  selinux  tmp  vmlinuz
+]0;vik@ubuntu: /vik@ubuntu:/$ cd etc
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ dir
+acpi			group-		     pam.conf
+adduser.conf		grub.d		     pam.d
+alternatives		gshadow		     papersize
+anacrontab		gshadow-	     passwd
+apache2			gtk-2.0		     passwd-
+apm			hdparm.conf	     pcmcia
+apparmor		host.conf	     perl
+apparmor.d		hostname	     pm
+apport			hosts		     pnm2ppa.conf
+apt			hosts.allow	     polkit-1
+at.deny			hosts.deny	     popularity-contest.conf
+avahi			hp		     ppp
+bash.bashrc		ifplugd		     profile
+bash_completion		init		     profile.d
+bash_completion.d	init.d		     protocols
+bindresvport.blacklist	initramfs-tools      pulse
+blkid.conf		inputrc		     python
+blkid.tab		insserv		     python2.7
+bluetooth		insserv.conf	     rc0.d
+bogofilter.cf		insserv.conf.d	     rc1.d
+bonobo-activation	iproute2	     rc2.d
+brlapi.key		issue		     rc3.d
+brltty			issue.net	     rc4.d
+ca-certificates		javascript-common    rc5.d
+ca-certificates.conf	kbd		     rc6.d
+calendar		kernel		     rc.local
+chatscripts		kernel-img.conf      rcS.d
+checkbox.d		kerneloops.conf      resolvconf
+chromium-browser	ldap		     resolv.conf
+compizconfig		ld.so.cache	     rmt
+computer-janitor.d	ld.so.conf	     rpc
+ConsoleKit		ld.so.conf.d	     rsyslog.conf
+console-setup		legal		     rsyslog.d
+cron.d			lftp.conf	     samba
+cron.daily		libao.conf	     sane.d
+cron.hourly		libpaper.d	     securetty
+cron.monthly		libreoffice	     security
+crontab			lighttpd	     sensors3.conf
+cron.weekly		lintianrc	     sensors.d
+crypttab		locale.alias	     services
+cups			localtime	     sgml
+cupshelpers		logcheck	     shadow
+dbus-1			login.defs	     shadow-
+debconf.conf		logrotate.conf	     shells
+debian_version		logrotate.d	     skel
+default			lsb-base	     snmp
+defoma			lsb-base-logging.sh  sound
+deluser.conf		lsb-release	     speech-dispatcher
+depmod.d		ltrace.conf	     ssh
+dhcp			magic		     ssl
+dhcp3			magic.mime	     sudoers
+dictionaries-common	mailcap		     sudoers.d
+doc-base		mailcap.order	     sysctl.conf
+dpkg			manpath.config	     sysctl.d
+emacs			mecabrc		     terminfo
+emacs23			mime.types	     timezone
+environment		mke2fs.conf	     ucf.conf
+firefox			modprobe.d	     udev
+fonts			modules		     ufw
+foomatic		mono		     updatedb.conf
+fstab			motd		     update-manager
+fuse.conf		mtab		     update-motd.d
+gai.conf		mtab.fuselock	     update-notifier
+gamin			mtools.conf	     UPower
+gconf			mysql		     usb_modeswitch.conf
+gdb			nanorc		     usb_modeswitch.d
+gdm			netscsid.conf	     vim
+ghostscript		network		     vtrgb
+ginn			NetworkManager	     wgetrc
+gnome			networks	     wodim.conf
+gnome-app-install	newt		     wpa_supplicant
+gnome-settings-daemon	nsswitch.conf	     X11
+gnome-system-tools	obex-data-server     xdg
+gnome-vfs-2.0		ODBCDataSources      xml
+gnome-vfs-mime-magic	odbc.ini	     xul-ext
+groff			openoffice	     zsh_command_not_found
+group			opt
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ sudo bash.bashrcgbash.bashrcebash.bashrcdbash.bashrcibash.bashrctbash.bashrc bash.bashrc
+[sudo] password for vik: 
+
+(gedit:20155): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.0K3O0V': No such file or directory
+
+(gedit:20155): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+
+(gedit:20155): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.K0RW0V': No such file or directory
+
+(gedit:20155): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+
+(gedit:20155): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.M8PW0V': No such file or directory
+
+(gedit:20155): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+
+(gedit:20155): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.UF520V': No such file or directory
+
+(gedit:20155): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ sudo gedit bash.bashrc
+
+(gedit:20170): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.HTIT0V': No such file or directory
+
+(gedit:20170): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+
+(gedit:20170): Gtk-WARNING **: Attempting to store changes into `/root/.local/share/recently-used.xbel', but failed: Failed to create file '/root/.local/share/recently-used.xbel.4CYJ0V': No such file or directory
+
+(gedit:20170): Gtk-WARNING **: Attempting to set the permissions of `/root/.local/share/recently-used.xbel', but failed: No such file or directory
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ ^C
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ 
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ 
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ ^C
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ 
+]0;vik@ubuntu: /etcvik@ubuntu:/etc$ exit
+exit
+
+Script done on Sat 27 Aug 2011 03:16:04 PM EDT

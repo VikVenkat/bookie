@@ -2,6 +2,7 @@
 development:
   app_id: 142270179193416
   secret_key: f6beeedb769017dd7c6c45dd50706c1d
+  callback_url: http://localhost:3000/
 test:
   app_id: 142270179193416
   secret_key: f6beeedb769017dd7c6c45dd50706c1d

@@ -8,12 +8,14 @@ gem "rake", "0.8.7"
 #gem 'facebooker'
 
 #this still seems to be breaking
-# gem 'fbgraph'
+#gem 'fbgraph'
 
 #see if this fbook framework is better
 gem 'koala'
 
+
 gem 'sqlite3'
+
 
 gem 'devise'
 
@@ -39,7 +41,11 @@ gem 'taps'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
+
+
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+
+
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
