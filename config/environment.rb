@@ -9,6 +9,6 @@ Bookie::Application.initialize!
 
 #trying to get koala to work
 #The first line enables Facebook callback to your server.  The following line adds koala gem into this application.
-config.action_controller.allow_forgery_protection = false
-config.gem "koala"
+#config.action_controller.allow_forgery_protection = false
+#config.gem "koala"
 

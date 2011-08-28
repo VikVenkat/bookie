@@ -10,41 +10,6 @@
 </head>
 <body>
 
-<div id="fb-root"></div>
-
- 
-
-<script type="text/javascript">
-
- FB.init({
-
-	 appId  : '<%= Facebook::APP_ID %>',
-
-	 status : true, // check login status
-
-	 cookie : true, // enable cookies to allow the server to access the session
-
-	 xfbml  : true  // parse XFBML
-
- });
-
- 
-
- FB.login(function(response) {
-
-	if (response.session) {
-
-		 //location.href = '/home'
-
-	} 
-	else {
-
-		 // user cancelled login
-
- 	}
-});
-</script>
-
 
 <%= yield %>
 <br>

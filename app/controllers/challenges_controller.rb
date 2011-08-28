@@ -57,7 +57,7 @@ class ChallengesController < ApplicationController
 
     respond_to do |format|
       if @challenge.save
-        format.html { redirect_to(challenges_path, :notice => 'Challenge was successfully created.') }
+        format.html { redirect_to(root_path, :notice => 'Challenge was successfully created.') }
         format.xml  { render :xml => @challenge, :status => :created, :location => @challenge }
       else
         format.html { render :action => "new" }

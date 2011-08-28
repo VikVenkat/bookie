@@ -13838,3 +13838,865 @@ Rendered devise/_registration_items.html.erb (1.4ms)
 Rendered devise/_login_items.html.erb (1.6ms)
 Rendered home/index.html.erb within layouts/application (184.4ms)
 Completed 200 OK in 244ms (Views: 186.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 22:51:25 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_open.html.erb (605.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered home/index.html.erb within layouts/application (662.0ms)
+Completed 200 OK in 740ms (Views: 710.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Sat Aug 27 22:51:50 -0400 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (272.0ms)
+Completed 200 OK in 353ms (Views: 319.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sat Aug 27 22:51:53 -0400 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 159ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Aug 27 22:51:58 -0400 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"TVn4Xd6/TVQJYFTM00mUuVK9fePRMWxn1Go+NhCvbow=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"vik.venkat@gmail.com"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'vik.venkat@gmail.com' LIMIT 1
+  [1m[36mAREL (3.0ms)[0m  [1mUPDATE "users" SET "sign_in_count" = 14, "current_sign_in_at" = '2011-08-28 02:51:59.227705', "updated_at" = '2011-08-28 02:51:59.228705', "last_sign_in_at" = '2011-08-27 20:31:37.062765' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 486ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 22:51:59 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_form.html.erb (108.0ms)
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1
+Rendered challenges/_current.html.erb (10.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Rendered challenges/_accept.erb (143.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_open.html.erb (12.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (1.0ms)
+Rendered home/index.html.erb within layouts/application (416.0ms)
+Completed 200 OK in 484ms (Views: 454.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 22:52:23 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_form.html.erb (47.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+Rendered challenges/_current.html.erb (21.0ms)
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+Rendered challenges/_accept.erb (164.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_open.html.erb (24.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (527.0ms)
+Completed 200 OK in 601ms (Views: 570.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 22:53:08 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (174.0ms)
+Completed   in 252ms
+
+ActionView::Template::Error (can't convert nil into String):
+    9: <div id="main">
+    10: <% if user_signed_in? %>
+    11: <h3> Hello, <%= current_user.email %> </h3>
+    12: <%= image_tag @pic %>
+    13: 
+    14: <%#= getpic_path(:id => current_user.id), :method => :get %>
+    15: 
+  app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb__1028941949_68350536_0'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (39.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (79.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 22:53:42 -0400 2011
+  Processing by HomeController#index as HTML
+Completed   in 27ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/controllers/home_controller.rb:5:in `index'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (36.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (71.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 22:54:56 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_form.html.erb (112.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1[0m
+Rendered challenges/_current.html.erb (20.0ms)
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+Rendered challenges/_accept.erb (103.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_open.html.erb (23.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered home/index.html.erb within layouts/application (427.0ms)
+Completed 200 OK in 506ms (Views: 467.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 22:56:46 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_form.html.erb (48.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1
+Rendered challenges/_current.html.erb (20.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Rendered challenges/_accept.erb (162.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_open.html.erb (28.0ms)
+Rendered devise/_registration_items.html.erb (0.0ms)
+Rendered devise/_login_items.html.erb (0.0ms)
+Rendered home/index.html.erb within layouts/application (410.6ms)
+Completed 200 OK in 592ms (Views: 464.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:04:41 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_form.html.erb (47.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 6[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 11
+Rendered challenges/_current.html.erb (136.0ms)
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Rendered challenges/_accept.erb (53.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_open.html.erb (25.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (526.0ms)
+Completed 200 OK in 604ms (Views: 566.0ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/users/sign_out" for 127.0.0.1 at Sat Aug 27 23:06:47 -0400 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TVn4Xd6/TVQJYFTM00mUuVK9fePRMWxn1Go+NhCvbow="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 114ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:06:48 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_open.html.erb (162.0ms)
+Rendered devise/_registration_items.html.erb (0.0ms)
+Rendered devise/_login_items.html.erb (0.0ms)
+Rendered home/index.html.erb within layouts/application (244.2ms)
+Completed 200 OK in 322ms (Views: 289.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Sat Aug 27 23:06:50 -0400 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/_registration_items.html.erb (4.0ms)
+Rendered devise/_login_items.html.erb (4.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 197ms (Views: 158.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Aug 27 23:07:06 -0400 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"15equlMGudGuqpOqAN9SAdH9udb94pqlPsNbjr/pxhw=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test@test2.com"}}
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM "users" WHERE ("users"."email" = 'test@test2.com') LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "users" ("current_sign_in_ip", "updated_at", "reset_password_token", "is_admin", "sign_in_count", "created_at", "current_sign_in_at", "email", "reset_password_sent_at", "last_sign_in_at", "last_sign_in_ip", "encrypted_password", "remember_created_at") VALUES (NULL, '2011-08-28 03:07:06.771454', NULL, NULL, 0, '2011-08-28 03:07:06.771454', NULL, 'test@test2.com', NULL, NULL, NULL, '$2a$10$g2B4wVk4jHufkGkwffpmFeJ286KkUA4RjXaEzSpd0.ZboTO1oT8Ve', NULL)[0m
+  [1m[35mAREL (1.0ms)[0m  UPDATE "users" SET "current_sign_in_ip" = '127.0.0.1', "updated_at" = '2011-08-28 03:07:06.785454', "sign_in_count" = 1, "current_sign_in_at" = '2011-08-28 03:07:06.784454', "last_sign_in_at" = '2011-08-28 03:07:06.784454', "last_sign_in_ip" = '127.0.0.1' WHERE "users"."id" = 5
+Redirected to http://localhost:3000/
+Completed 302 Found in 395ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:07:06 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (120.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+Rendered challenges/_current.html.erb (5.0ms)
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+Rendered challenges/_accept.erb (22.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_open.html.erb (15.6ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (1.0ms)
+Rendered home/index.html.erb within layouts/application (312.8ms)
+Completed 200 OK in 397ms (Views: 362.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/hookups?challenge_id=11" for 127.0.0.1 at Sat Aug 27 23:07:13 -0400 2011
+  Processing by HookupsController#create as HTML
+  Parameters: {"challenge_id"=>"11", "authenticity_token"=>"15equlMGudGuqpOqAN9SAdH9udb94pqlPsNbjr/pxhw="}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "hookups" WHERE "hookups"."challenge_id" = 11 AND "hookups"."user_id" = 5[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "hookups" ("updated_at", "created_at", "user_id", "challenge_id") VALUES ('2011-08-28 03:07:13.304538', '2011-08-28 03:07:13.304538', 5, 11)
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:07:13 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (106.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+Rendered challenges/_current.html.erb (5.0ms)
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_accept.erb (56.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_open.html.erb (14.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (319.0ms)
+Completed 200 OK in 388ms (Views: 360.0ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/challenges" for 127.0.0.1 at Sat Aug 27 23:07:42 -0400 2011
+  Processing by ChallengesController#create as HTML
+  Parameters: {"commit"=>"Create Challenge", "authenticity_token"=>"15equlMGudGuqpOqAN9SAdH9udb94pqlPsNbjr/pxhw=", "utf8"=>"✓", "challenge"=>{"wager"=>"3 bitcoins", "challenge_name"=>"figure out how to use bitcoin"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "challenges" ("complete_date", "challenge_date", "user_id", "updated_at", "challenge_name", "complete", "completed_by", "wager", "created_at", "due_date", "started_by") VALUES (NULL, '2011-08-27', 5, '2011-08-28 03:07:42.647090', 'figure out how to use bitcoin', 'f', NULL, '3 bitcoins', '2011-08-28 03:07:42.647090', '2011-09-03', 5)[0m
+Redirected to http://localhost:3000/challenges
+Completed 302 Found in 234ms
+
+
+Started GET "/challenges" for 127.0.0.1 at Sat Aug 27 23:07:42 -0400 2011
+  Processing by ChallengesController#index as HTML
+  [1m[35mChallenge Load (2.0ms)[0m  SELECT "challenges".* FROM "challenges"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered challenges/index.html.erb within layouts/application (215.0ms)
+Completed 200 OK in 348ms (Views: 322.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:08:29 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_form.html.erb (50.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5[0m
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12
+Rendered challenges/_current.html.erb (47.0ms)
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_accept.erb (32.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_open.html.erb (33.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (417.0ms)
+Completed 200 OK in 497ms (Views: 463.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:11:47 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (136.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12[0m
+Rendered challenges/_current.html.erb (47.0ms)
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_accept.erb (34.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (32.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (421.0ms)
+Completed 200 OK in 502ms (Views: 465.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:12:21 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_form.html.erb (109.0ms)
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12
+Rendered challenges/_current.html.erb (44.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_accept.erb (29.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_open.html.erb (26.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (357.0ms)
+Completed 200 OK in 427ms (Views: 399.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:13:09 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (109.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12[0m
+Rendered challenges/_current.html.erb (49.0ms)
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_accept.erb (31.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (32.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (390.0ms)
+Completed 200 OK in 466ms (Views: 435.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:14:59 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_form.html.erb (47.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12
+Rendered challenges/_current.html.erb (106.0ms)
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_accept.erb (32.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_open.html.erb (33.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (481.0ms)
+Completed 200 OK in 560ms (Views: 528.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:15:36 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (46.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12[0m
+Rendered challenges/_current.html.erb (45.0ms)
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_accept.erb (86.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (27.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (448.0ms)
+Completed 200 OK in 518ms (Views: 492.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:23:00 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_form.html.erb (46.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12
+Rendered challenges/_current.html.erb (53.0ms)
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_accept.erb (33.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_open.html.erb (38.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (433.0ms)
+Completed 200 OK in 511ms (Views: 478.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:24:37 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (111.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12[0m
+Rendered challenges/_current.html.erb (48.0ms)
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_accept.erb (32.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (35.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (397.0ms)
+Completed 200 OK in 473ms (Views: 439.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:24:44 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_form.html.erb (110.0ms)
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5[0m
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12
+Rendered challenges/_current.html.erb (51.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_accept.erb (32.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_open.html.erb (40.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (411.2ms)
+Completed 200 OK in 479ms (Views: 446.4ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/hookups?challenge_id=11" for 127.0.0.1 at Sat Aug 27 23:25:12 -0400 2011
+  Processing by HookupsController#create as HTML
+  Parameters: {"challenge_id"=>"11", "authenticity_token"=>"15equlMGudGuqpOqAN9SAdH9udb94pqlPsNbjr/pxhw="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "hookups" WHERE "hookups"."challenge_id" = 11 AND "hookups"."user_id" = 5
+Redirected to http://localhost:3000/
+Completed 302 Found in 194ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:25:12 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (132.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12[0m
+Rendered challenges/_current.html.erb (49.0ms)
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_accept.erb (33.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (32.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (412.0ms)
+Completed 200 OK in 490ms (Views: 456.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:25:24 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_form.html.erb (60.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12
+Rendered challenges/_current.html.erb (106.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered challenges/_accept.erb (33.0ms)
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_open.html.erb (32.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (475.0ms)
+Completed 200 OK in 548ms (Views: 518.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:27:32 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (81.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12[0m
+Rendered challenges/_current.html.erb (82.0ms)
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_accept.erb (97.0ms)
+  [1m[36mChallenge Load (2.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (36.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered home/index.html.erb within layouts/application (664.0ms)
+Completed 200 OK in 763ms (Views: 720.0ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/hookups?challenge_id=12" for 127.0.0.1 at Sat Aug 27 23:28:14 -0400 2011
+  Processing by HookupsController#create as HTML
+  Parameters: {"challenge_id"=>"12", "authenticity_token"=>"15equlMGudGuqpOqAN9SAdH9udb94pqlPsNbjr/pxhw="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "hookups" WHERE "hookups"."challenge_id" = 12 AND "hookups"."user_id" = 5[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "hookups" ("user_id", "challenge_id", "updated_at", "created_at") VALUES (5, 12, '2011-08-28 03:28:14.688722', '2011-08-28 03:28:14.688722')
+Redirected to http://localhost:3000/
+Completed 302 Found in 101ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:28:14 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_form.html.erb (107.0ms)
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12[0m
+Rendered challenges/_current.html.erb (60.0ms)
+Rendered home/index.html.erb within layouts/application (275.0ms)
+Completed   in 352ms
+
+ActionView::Template::Error (undefined method `exists?' for #<Hookup:0x84fb880>):
+    4:   You bet <b><%= c.wager %></b> for someone to <b><%= c.challenge_name %></b> by <b><%= c.due_date %></b></br>
+    5: 	<% Hookup.where(:challenge_id => c.id).each do |h| %>
+    6: 	
+    7: 		<% if !h.exists? %>
+    8: 			nobody has yet
+    9: 		<$ else %>
+    10: 			<% User.where(:id => h.user_id).each do |u| %>
+  app/views/challenges/_current.html.erb:7:in `_app_views_challenges__current_html_erb___16164387_70025508_64246'
+  app/views/challenges/_current.html.erb:5:in `_app_views_challenges__current_html_erb___16164387_70025508_64246'
+  app/views/challenges/_current.html.erb:2:in `_app_views_challenges__current_html_erb___16164387_70025508_64246'
+  app/views/home/index.html.erb:31:in `_app_views_home_index_html_erb__1028941949_69582816_0'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (52.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:28:52 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_form.html.erb (49.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 5[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 12
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM "hookups" WHERE "hookups"."challenge_id" = 12 LIMIT 1[0m
+Rendered challenges/_current.html.erb (55.0ms)
+  [1m[35mHookup Load (1.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 5
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 11[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 12[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Rendered challenges/_accept.erb (99.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (32.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (520.0ms)
+Completed 200 OK in 602ms (Views: 564.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/users/sign_out" for 127.0.0.1 at Sat Aug 27 23:29:09 -0400 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"15equlMGudGuqpOqAN9SAdH9udb94pqlPsNbjr/pxhw="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:29:10 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (115.0ms)
+Rendered devise/_registration_items.html.erb (3.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered home/index.html.erb within layouts/application (208.0ms)
+Completed 200 OK in 383ms (Views: 254.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Sat Aug 27 23:29:12 -0400 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/_registration_items.html.erb (3.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (113.0ms)
+Completed 200 OK in 199ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sat Aug 27 23:29:14 -0400 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/_registration_items.html.erb (4.0ms)
+Rendered devise/_login_items.html.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 293ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Sat Aug 27 23:29:18 -0400 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"OqWAZc0ELy8t7sEolWh8uh/qny7jLSfN+Gj0gC7ZGIM=", "utf8"=>"✓", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"vik.venkat@gmail.com"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'vik.venkat@gmail.com' LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-08-28 03:29:19.292979', "updated_at" = '2011-08-28 03:29:19.294979', "sign_in_count" = 15, "last_sign_in_at" = '2011-08-28 02:51:59.227705' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 303ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:29:19 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_form.html.erb (47.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 6
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM "hookups" WHERE "hookups"."challenge_id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 11[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM "hookups" WHERE "hookups"."challenge_id" = 11 LIMIT 1
+Rendered challenges/_current.html.erb (131.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Rendered challenges/_accept.erb (55.2ms)
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (42.6ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (532.4ms)
+Completed 200 OK in 608ms (Views: 573.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:30:45 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_form.html.erb (140.0ms)
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 6
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM "hookups" WHERE "hookups"."challenge_id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 11[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM "hookups" WHERE "hookups"."challenge_id" = 11 LIMIT 1
+Rendered challenges/_current.html.erb (69.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Rendered challenges/_accept.erb (70.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (31.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (480.0ms)
+Completed 200 OK in 558ms (Views: 522.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Aug 27 23:31:53 -0400 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered challenges/_form.html.erb (112.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."started_by" = 1[0m
+  [1m[35mHookup Load (0.0ms)[0m  SELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 6
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM "hookups" WHERE "hookups"."challenge_id" = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mHookup Load (0.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."challenge_id" = 11[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM "hookups" WHERE "hookups"."challenge_id" = 11 LIMIT 1
+Rendered challenges/_current.html.erb (70.0ms)
+  [1m[36mHookup Load (1.0ms)[0m  [1mSELECT "hookups".* FROM "hookups" WHERE "hookups"."user_id" = 1[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 6
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 7[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 5[0m
+  [1m[35mChallenge Load (1.0ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 9
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = 10[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Rendered challenges/_accept.erb (71.0ms)
+  [1m[36mChallenge Load (1.0ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."complete" = 'f'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered challenges/_open.html.erb (31.0ms)
+Rendered devise/_registration_items.html.erb (2.0ms)
+Rendered devise/_login_items.html.erb (2.0ms)
+Rendered home/index.html.erb within layouts/application (454.0ms)
+Completed 200 OK in 531ms (Views: 492.0ms | ActiveRecord: 11.0ms)

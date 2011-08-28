@@ -2,15 +2,25 @@
 <% Challenge.where(:started_by => current_user.id).each do |c| %>
 <div id = "current">
   You bet <b><%= c.wager %></b> for someone to <b><%= c.challenge_name %></b> by <b><%= c.due_date %></b></br>
-  <% User.where(:id => c.user_id).each do |c2| %>
-	<%= c2.email %>, 
-  <% end %>
+  
+	<% Hookup.where(:challenge_id => c.id).each do |h| %>
+	
+		<% unless Hookup.where(:challenge_id => c.id).exists? %>
+			nobody has yet
+		<$ else %>
+			<% User.where(:id => h.user_id).each do |u| %>
+			<%= u.email %>, 
+			<% end %>
+		<% end %>
+	<% end %>
+	
 	accepted this challenge.</br>
-  <% if c.complete? then %> Finished by <b>
+	
+	<% if c.complete? then %> Finished by <b>
 		<%= User.where(:id => c.completed_by).first.email %>
 		</b> on <b><%= c.complete_date %></b>
-  <% end %>
-
+	<% end %>
+		
 </div>
 </br>
 <% end %>
